@@ -1,6 +1,7 @@
 FROM python:3.7
+USER root
 WORKDIR /usr/app
 COPY . /usr/app
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 EXPOSE 5002
-CMD ["python", "server.py", "0.0.0.0"]
+CMD ["python3", "server.py", "0.0.0.0"]
